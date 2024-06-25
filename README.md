@@ -9,5 +9,5 @@ git clone https://github.com/HeJo-1/HeJo-02
 cd HeJo-02
 pip install -r req.txt
 python3 main.py
-
+  ```
 Hiçbir sorumluluk kabul etmiyorum ve tamamen eğitim için yazılımış bir koddur
