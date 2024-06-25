@@ -7,7 +7,6 @@ import time
 import requests
 import asyncio
 import aiohttp
-import requests
 import os
 import subprocess
 import sys
