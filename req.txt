@@ -1,0 +1,11 @@
+selenium
+requests
+re
+Fernet
+itertools
+socket
+openpyxl
+BeautifulSoup
+subprocess
+aiohttp
+asyncio
