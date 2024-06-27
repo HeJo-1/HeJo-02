@@ -22,7 +22,7 @@ from cryptography.fernet import Fernet
 import requests, re , colorama ,random
 from colorama import Fore, Back, Style
 from requests.structures import CaseInsensitiveDict
-
+user = str(input("User Name : "))
 def discord():
     def passwo():
         def get_token(username, password):
@@ -262,7 +262,7 @@ def discord():
         ''')
 
 
-    i = int(input(""))
+    i = int(input(f"HeJo@{user}:~/SosyalMedyaTooları/Discord$ "))
     if i == 1:
         sel()
     elif i == 2:
@@ -315,7 +315,7 @@ def adminPanelScan():
 
 
     url = input("URL (Örnek : https://www.youtube.com) : ")
-    print(f"Tarama başlıyor...")
+    print(f"HeJo@{user}:~/WebTooları$\nTarama başlıyor...")
     cnt =0
     for v in lst:
         try:
@@ -1853,7 +1853,7 @@ def sosyalMedyaToolları():
 [1] Discord
 [2] Spotify Çalma Listesi İndirici
 ''')
-    secim = input("Seçim : ")
+    secim = input(f"HeJo@{user}:~/SosyalMedyaTooları$ ")
     if secim == "1":
         discord()
     elif secim == "2":
@@ -1866,7 +1866,7 @@ def webTooları():
 [3] Dork İle Kayıtlı Kameraları İzleme
 [4] Admin Paneli Tarayıcı
 ''')
-    secim = input("Seçim : ")
+    secim = input(f"HeJo@{user}:~/WebTooları$ ")
     if secim == "1":
         dork()
     elif secim == "2":
@@ -1880,7 +1880,7 @@ def bruderForceTooları():
 [1] Selenium İle İnstagrak Kaba Kuvvet Saldırısı
 [2] Wordlist Oluşturucu
 ''')
-    secim = input("Seçim : ")
+    secim = input(f"HeJo@{user}:~/BruterForceTooları$ ")
     if secim == "1":
         instagramSeleniumBf()
     elif secim == "2":
@@ -1893,7 +1893,7 @@ def DoğrudanCihazaYapılanSaldırıTooları():
 [3] Trojen Oluşturucu
 [4] İp İle Bilgi Toplama
 ''')
-    secim = input("Seçim : ")
+    secim = input(f"HeJo@{user}:~/DoğrudanCihazaYapılanSaldırıTooları$ ")
     if secim == "1":
         sms()
     elif secim == "2":
@@ -1955,8 +1955,8 @@ instagram : bymer_ak
     |
     |-> Dosya Şifreleme
 ''')
-
-    a = int(input(""))
+    
+    a = int(input(f"HeJo@{user}:~$ "))
     if a == 1:
         sosyalMedyaToolları()
     elif a == 2:
