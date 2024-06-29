@@ -9,3 +9,10 @@ BeautifulSoup
 subprocess
 aiohttp
 asyncio
+sys
+colorama
+base64
+json
+shutil
+sqlite3
+CryptUnprotectData
