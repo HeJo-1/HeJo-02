@@ -1,5 +1,6 @@
 # HeJo-02
-![image](https://github.com/HeJo-1/HeJo-02/assets/152224096/14eade89-dde6-4419-8ea8-e7f728cfd04d)
+![image](https://github.com/HeJo-1/HeJo-02/assets/152224096/94048886-555e-48c4-b23a-c356ff14501e)
+
 
 Bu büyük bir tool ve içerisinde gözdüğünüz gibi bir çok şey var yeni eklenmesini istediğiniz bir şey olursa instagramdan veya discorddan yazabilirsiniz
 
