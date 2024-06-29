@@ -22,7 +22,51 @@ from cryptography.fernet import Fernet
 import requests, re , colorama ,random
 from colorama import Fore, Back, Style
 from requests.structures import CaseInsensitiveDict
+print(Fore.GREEN,"")
 user = str(input("User Name : "))
+
+def wifiAğları():
+    
+    while True:
+
+        import subprocess
+
+        print("Sistem analiz ediliyor")
+        import time
+
+        time.sleep(1)
+
+        print("Bulunan Wifiler: ")
+
+        veri = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
+        sistemler = [i.split(":")[1][1:-1] for i in veri if "All User Profile" in i]
+        for i in sistemler:
+            sonuç = subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('utf-8').split(
+                '\n')
+            sonuç = [b.split(":")[1][1:-1] for b in sonuç if "Key Content" in b]
+            try:
+                print(" \\{:<30}| Şifre:  {:<}".format(i, sonuç[0]))
+            except IndexError:
+                print(" \\{:<30}| Şifre:  {:<}".format(i, ""))
+
+        exe = int(input("\n \n \n1'e basarak yeniden sistemi analiz edebilirsiniz \n2'ye basarak çıkış yapabilirsiniz "))
+        if (exe == 1):
+            print("")
+            import time
+
+            time.sleep(1)
+
+
+        elif (exe == 2):
+            print("")
+            import time
+
+            time.sleep(1)
+            break
+            quit()
+
+        else:
+            print("Bir hata yaptınız lütfen tekrar deneyin")
 
 def chrome():
     def kayıt():
@@ -2191,22 +2235,32 @@ def dorkKameraları():
         exit()
 
 def sosyalMedyaToolları():
+    print(Fore.RED)
     print(''' 
 [1] Discord
 [2] Spotify Çalma Listesi İndirici
+[98] Üst Menüye Dön
+[99] Çıkış
 ''')
     secim = input(f"HeJo@{user}:~/SosyalMedyaTooları$ ")
     if secim == "1":
         discord()
     elif secim == "2":
         spotify()
+    elif secim == "98":
+        main()
+    elif secim == "99":
+        quit()
 
 def webTooları():
+    print(Fore.LIGHTMAGENTA_EX)
     print('''
 [1] Dork İle Derin Arama Yapma
 [2] Web Sitesindeki Tüm Tıklanabilen Elementleri Bulma
 [3] Dork İle Kayıtlı Kameraları İzleme
 [4] Admin Paneli Tarayıcı
+[98] Üst Menüye Dön
+[99] Çıkış
 ''')
     secim = input(f"HeJo@{user}:~/WebTooları$ ")
     if secim == "1":
@@ -2217,24 +2271,38 @@ def webTooları():
         dorkKameraları()
     elif secim == "4":
         adminPanelScan()
+    elif secim == "98":
+        main()
+    elif secim == "99":
+        quit()
 def bruderForceTooları():
+    print(Fore.LIGHTGREEN_EX)
     print('''
 [1] Selenium İle İnstagrak Kaba Kuvvet Saldırısı
 [2] Wordlist Oluşturucu
+[98] Üst Menüye Dön
+[99] Çıkış
 ''')
     secim = input(f"HeJo@{user}:~/BruterForceTooları$ ")
     if secim == "1":
         instagramSeleniumBf()
     elif secim == "2":
         wordlistOluşturucu()
+    elif secim == "98":
+        main()
+    elif secim == "99":
+        quit()
 
 def DoğrudanCihazaYapılanSaldırıTooları():
+    print(Fore.CYAN)
     print('''
 [1]Sms Boomber
 [2] Pc Killer
 [3] Trojen Oluşturucu
 [4] İp İle Bilgi Toplama
 [5] Tarayıcıdaki Kayıtlı Her Şeyi Alma
+[98] Üst Menüye Dön
+[99] Çıkış
 ''')
     secim = input(f"HeJo@{user}:~/DoğrudanCihazaYapılanSaldırıTooları$ ")
     if secim == "1":
@@ -2247,69 +2315,102 @@ def DoğrudanCihazaYapılanSaldırıTooları():
         ipToİnformation()
     elif secim == "5":
         chrome()
+    elif secim == "98":
+        main()
+    elif secim == "99":
+        quit()
 
 def kriptolojiTooları():
+    print(Fore.LIGHTYELLOW_EX)
     print('''
 [1] Dosya Şifreleme
+[98] Üst Menüye Dön
+[99] Çıkış
 ''')
-    secim = input("Seçim : ")
+    secim = input(f"HeJo@{user}:~/KriptolojiTooları$ ")
     if secim == "1":
         dosyaŞifreleme()
-
-while True:
+    elif secim == "98":
+        main()
+    elif secim == "99":
+        quit()
+def istatislik():
+    print(Fore.MAGENTA)
     print('''
+[1] Kayıtlı Wifi Ağlarını ve şifrelerini Görüntüleme
+[98] Üst Menüye Dön
+[99] Çıkış
+        ''')
+    secim = input(f"HeJo@{user}:~/İstatistik$ ")
+    if secim == "1":
+        wifiAğları()
+    elif secim == "98":
+        main()
+    elif secim == "99":
+        quit()
+def main():  
+    while True:
+        print(Fore.CYAN)
+        print('''
 
-  _    _               _                     ___    ___  
- | |  | |             | |                   / _ \  |__ \ 
- | |__| |   ___       | |   ___    ______  | | | |    ) |
- |  __  |  / _ \  _   | |  / _ \  |______| | | | |   / / 
- | |  | | |  __/ | |__| | | (_) |          | |_| |  / /_ 
- |_|  |_|  \___|  \____/   \___/            \___/  |____|
-                                                         
-                                                         
-Discord : https://discord.gg/eAknugSZZ7
-instagram : bymer_ak
+    _    _               _                     ___    ___  
+    | |  | |             | |                   / _ \  |__ \ 
+    | |__| |   ___       | |   ___    ______  | | | |    ) |
+    |  __  |  / _ \  _   | |  / _ \  |______| | | | |   / / 
+    | |  | | |  __/ | |__| | | (_) |          | |_| |  / /_ 
+    |_|  |_|  \___|  \____/   \___/            \___/  |____|
+                                                            
+                                                            
+    Discord : https://discord.gg/eAknugSZZ7
+    instagram : bymer_ak
 
-[1] Sosyal Medya Tooları
-    |
-    |-> Discord
+    [1] Sosyal Medya Tooları
         |
-        |-> Token ile bilgi alma
-        |-> Bilgiler ile token alma
-        |-> Spam botu
-        |-> Hedef kullanıcının bilgilerini değiştirme
-        |-> J4J botu
-    |-> Spotify Çalma Listesi İndirici
-[2] Web Tooları
-    |
-    |-> Dork İle Derin Arama Yapma
-    |-> Web Sitesindeki Tüm Tıklanabilen Elementleri Bulma
-    |-> Dork İle Kayıtlı Kameraları İzleme
-    |-> Admin Paneli Tarayıcı
-[3] Brute Force Tolları
-    |
-    |-> Selenium İle İnstagrak Kaba Kuvvet Saldırısı
-    |-> Wordlist Oluşturucu
-[4] Doğrudan Cihaza Yapılan Saldırı Tooları
-    |
-    |-> Sms Boomber
-    |-> Pc Killer
-    |-> Trojen Oluşturucu
-    |-> İp İle Bilgi Toplama
-    |-> Tarayıcıdaki Kayıtlı Her Şeyi Alma
-[5] Kriptoloji Tooları
-    |
-    |-> Dosya Şifreleme
-''')
-    
-    a = int(input(f"HeJo@{user}:~$ "))
-    if a == 1:
-        sosyalMedyaToolları()
-    elif a == 2:
-        webTooları()
-    elif a == 3:
-        bruderForceTooları()
-    elif a == 4:
-        DoğrudanCihazaYapılanSaldırıTooları()
-    elif a == 5:
-        kriptolojiTooları()
+        |-> Discord
+            |
+            |-> Token ile bilgi alma
+            |-> Bilgiler ile token alma
+            |-> Spam botu
+            |-> Hedef kullanıcının bilgilerini değiştirme
+            |-> J4J botu
+        |-> Spotify Çalma Listesi İndirici
+    [2] Web Tooları
+        |
+        |-> Dork İle Derin Arama Yapma
+        |-> Web Sitesindeki Tüm Tıklanabilen Elementleri Bulma
+        |-> Dork İle Kayıtlı Kameraları İzleme
+        |-> Admin Paneli Tarayıcı
+    [3] Brute Force Tolları
+        |
+        |-> Selenium İle İnstagrak Kaba Kuvvet Saldırısı
+        |-> Wordlist Oluşturucu
+    [4] Doğrudan Cihaza Yapılan Saldırı Tooları
+        |
+        |-> Sms Boomber
+        |-> Pc Killer
+        |-> Trojen Oluşturucu
+        |-> İp İle Bilgi Toplama
+        |-> Tarayıcıdaki Kayıtlı Her Şeyi Alma
+    [5] Kriptoloji Tooları
+        |
+        |-> Dosya Şifreleme
+    [6] İstatislik
+        |
+        |-> Kayıtlı Wifi Ağlarını ve Şifrelerini Görüntüleme
+    ''')
+        
+        a = int(input(f"HeJo@{user}:~$ "))
+        if a == 1:
+            sosyalMedyaToolları()
+        elif a == 2:
+            webTooları()
+        elif a == 3:
+            bruderForceTooları()
+        elif a == 4:
+            DoğrudanCihazaYapılanSaldırıTooları()
+        elif a == 5:
+            kriptolojiTooları()
+        elif a == 6:
+            istatislik()
+if __name__ == "__main__":
+    main()
