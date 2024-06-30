@@ -12,3 +12,9 @@ pip install -r req.txt
 python3 main.py
   ```
 Hiçbir sorumluluk kabul etmiyorum ve tamamen eğitim için yazılımış bir koddur
+
+## Son Eklenmeler
+- User Name eklendi ve estetik bir görünüm kazanıldı
+- Tarayıcıdaki Kayıtlı Her Şeyi Almaya yarıyan tool eklendi
+- İstatislik Toolar'ı eklendi
+- Random renklendirme eklendi
