@@ -22,7 +22,10 @@ from cryptography.fernet import Fernet
 import requests, re , colorama ,random
 from colorama import Fore, Back, Style
 from requests.structures import CaseInsensitiveDict
-print(Fore.GREEN,"")
+renkler = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTMAGENTA_EX, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX, Fore.LIGHTYELLOW_EX, Fore.WHITE,Fore.YELLOW] 
+random_renk = random.choice(renkler)
+
+print(random_renk,"")
 user = str(input("User Name : "))
 
 def wifiAğları():
@@ -644,6 +647,7 @@ def discord():
     3 - Spam 
     4 - Bilgileri değiştirme
     5 - J4J Botu
+    98 - Üst Menü
     99 - Çıkış    
         ''')
 
@@ -659,6 +663,8 @@ def discord():
         degistir()
     elif i ==5:
         j4j()
+    elif i == 98:
+        sosyalMedyaToolları()
     elif i == 99:
         exit()
     else:
@@ -2185,7 +2191,7 @@ def dorkKameraları():
     data = resp.json()
     countries = data['countries']
     os.system("cls")
-    print(Fore.LIGHTGREEN_EX +"""
+    print(random_renk +"""
     ╔═╗╔═╗╔╦╗
     ║  ╠═╣║║║
     ╚═╝╩ ╩╩ ╩
@@ -2235,7 +2241,7 @@ def dorkKameraları():
         exit()
 
 def sosyalMedyaToolları():
-    print(Fore.RED)
+    print(random_renk)
     print(''' 
 [1] Discord
 [2] Spotify Çalma Listesi İndirici
@@ -2253,7 +2259,7 @@ def sosyalMedyaToolları():
         quit()
 
 def webTooları():
-    print(Fore.LIGHTMAGENTA_EX)
+    print(random_renk)
     print('''
 [1] Dork İle Derin Arama Yapma
 [2] Web Sitesindeki Tüm Tıklanabilen Elementleri Bulma
@@ -2276,7 +2282,7 @@ def webTooları():
     elif secim == "99":
         quit()
 def bruderForceTooları():
-    print(Fore.LIGHTGREEN_EX)
+    print(random_renk)
     print('''
 [1] Selenium İle İnstagrak Kaba Kuvvet Saldırısı
 [2] Wordlist Oluşturucu
@@ -2294,7 +2300,7 @@ def bruderForceTooları():
         quit()
 
 def DoğrudanCihazaYapılanSaldırıTooları():
-    print(Fore.CYAN)
+    print(random_renk)
     print('''
 [1]Sms Boomber
 [2] Pc Killer
@@ -2321,7 +2327,7 @@ def DoğrudanCihazaYapılanSaldırıTooları():
         quit()
 
 def kriptolojiTooları():
-    print(Fore.LIGHTYELLOW_EX)
+    print(random_renk)
     print('''
 [1] Dosya Şifreleme
 [98] Üst Menüye Dön
@@ -2335,7 +2341,7 @@ def kriptolojiTooları():
     elif secim == "99":
         quit()
 def istatislik():
-    print(Fore.MAGENTA)
+    print(random_renk)
     print('''
 [1] Kayıtlı Wifi Ağlarını ve şifrelerini Görüntüleme
 [98] Üst Menüye Dön
@@ -2350,7 +2356,7 @@ def istatislik():
         quit()
 def main():  
     while True:
-        print(Fore.CYAN)
+        print(random_renk)
         print('''
 
      _    _               _                     ___    ___  
