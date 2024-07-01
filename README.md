@@ -18,3 +18,4 @@ Hiçbir sorumluluk kabul etmiyorum ve tamamen eğitim için yazılımış bir ko
 - Tarayıcıdaki Kayıtlı Her Şeyi Almaya yarıyan tool eklendi
 - İstatislik Toolar'ı eklendi
 - Random renklendirme eklendi
+- Pc Killer güncellendi
