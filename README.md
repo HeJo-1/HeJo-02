@@ -1,3 +1,10 @@
+# İçindekiler
+[Görsel](https://github.com/HeJo-1/HeJo-02?tab=readme-ov-file#hejo-02)
+
+[Kurulum](https://github.com/HeJo-1/HeJo-02?tab=readme-ov-file#kurulum)
+
+[Son Eklenenler](https://github.com/HeJo-1/HeJo-02/blob/main/README.md#son-eklenmeler)
+
 # HeJo-02
 ![image](https://github.com/HeJo-1/HeJo-02/assets/152224096/94048886-555e-48c4-b23a-c356ff14501e)
 
